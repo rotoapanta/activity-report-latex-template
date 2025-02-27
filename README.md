@@ -11,7 +11,7 @@
 **Activity Report LaTex template** is a professional **LaTeX** template designed for creating technical documents, manuals, and reports. This template provides a modular structure, customizable styles, and professional headers.
 
 ---
-## **Features**
+## Features
 
 - Modular structure: Each section is stored in separate files for easy editing.
 - Customizable headers and footers.
@@ -22,7 +22,7 @@
 - Custom diagrams using TikZ. 
 
 ---
-## **Estructura del Proyecto**
+## Project Structure
 
 ```
 activity-report-latex-template/
