@@ -7,7 +7,7 @@
 
 ## Descripción
 
-**activity-report-latex-template** es un template profesional en **LaTeX** diseñado para la creación de **documentos técnicos, manuales y reportes**. Este template proporciona una estructura modular, estilos personalizables y encabezados profesionales.
+**Activity Report LaTex template** es un template profesional en **LaTeX** diseñado para la creación de **documentos técnicos, manuales y reportes**. Este template proporciona una estructura modular, estilos personalizables y encabezados profesionales.
 
 ## **Características**
 
@@ -25,18 +25,20 @@
 
 ```
 MiTemplateLatex/
-│── template.tex                   # Documento principal (importa las secciones)
-│── styles/                         # Configuración de estilos y clases
-│   ├── template_config.sty         # Configuración general de estilos
-│   ├── template.cls               # Clase personalizada para documentos LaTeX
-│   ├── header_footer.tex           # Configuración de encabezado y pie de página
-│   ├── code_highlighting.tex       # Configuración para resaltado de código
+│── assets/                         # 
+│   ├── image.png         # 
 │── sections/                        # Secciones del documento
+│   ├── content.tex                 # Contenido principal del documento
 │   ├── cover_page.tex              # Portada
 │   ├── responsibility_levels.tex   # Niveles de responsabilidad
-│   ├── content.tex                 # Contenido principal del documento
+│── styles/                         # Configuración de estilos y clases
+│   ├── code_highlighting.tex       # Configuración para resaltado de código
+│   ├── document_metadata.tex       # 
+│   ├── header_footer.tex           # Configuración de encabezado y pie de página
+│   ├── template_config.sty         # Configuración general de estilos
 │── README.md                       # Este archivo (Instrucciones y detalles del proyecto)
-│── LICENSE                         # Licencia del proyecto (MIT)
+├── template.cls               # Clase personalizada para documentos LaTeX
+│── template.tex                   # Documento principal (importa las secciones)
 ```
 
 ---
@@ -44,18 +46,8 @@ MiTemplateLatex/
 ## **Requisitos**
 
 ### **Instalación de LaTeX**
-Para compilar este documento, asegúrate de tener una distribución de LaTeX instalada:
+Para compilar este documento, se necesita Overleaf:
 
-- **Ubuntu/Linux**:  
-  ```bash
-  sudo apt install texlive-full
-  ```
-- **Windows**:  
-  Descarga e instala **MikTeX** desde [https://miktex.org/download](https://miktex.org/download).
-- **Mac**:  
-  ```bash
-  brew install mactex
-  ```
 
 ### **Paquetes Necesarios**
 El template usa los siguientes paquetes de LaTeX:
@@ -64,14 +56,6 @@ El template usa los siguientes paquetes de LaTeX:
 \usepackage{graphicx, fancyhdr, hyperref, listings, tikz, xcolor, titlesec}
 \usepackage{geometry, lastpage, tocloft, array, multirow, helvet}
 ```
-
-Si algún paquete falta, instálalo con:
-
-```bash
-tlmgr install <nombre_del_paquete>
-```
-
----
 
 ## **Cómo Usarlo**
 1. **Clona el repositorio** en tu máquina local:
@@ -131,15 +115,22 @@ Este proyecto está licenciado bajo la **MIT License**. Puedes usarlo y modifica
 4. Envía un **Pull Request**.
 
 ---
+## License
 
-## **Contacto**
-Si tienes preguntas o sugerencias, contáctame en:
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
-**Email**: roberto.toapanta@email.com  
-**Twitter**: [@RobertoToapanta](https://twitter.com/RobertoToapanta)  
-**LinkedIn**: [Roberto Toapanta](https://linkedin.com/in/roberto-toapanta)
+## Authors
 
----
+- [@rotoapanta](https://github.com/rotoapanta)
 
-**¡Gracias por usar MiTemplateLatex!** ��
+## More Info
+
+* [Official documentation for DiGOS, Portafolio Seismic Measurement Equipment](https://digos.eu/seismology/)
+
+## Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/roberto-carlos-toapanta-g/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/rotoapanta)
+
+**¡Gracias por usar MiTemplateLatex!** 
 
