@@ -1,4 +1,4 @@
-# �� MiTemplateLatex
+# MiTemplateLatex
 
 ![LaTeX](https://img.shields.io/badge/LaTeX-Professional-blue?style=for-the-badge&logo=latex)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
