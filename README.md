@@ -1,6 +1,9 @@
 # Activity Report LaTex template
 
 ![LaTeX](https://img.shields.io/badge/LaTeX-Professional-blue?style=for-the-badge&logo=latex)
+![LaTeX](https://img.shields.io/badge/LaTeX-Professional-blue?logo=latex)
+![LaTeX](https://img.shields.io/badge/LaTeX-Professional-green?logo=latex)
+
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/github/license/rotoapanta/activity-report-latex-template)
 ![GitHub repo size](https://img.shields.io/github/repo-size/rotoapanta/activity-report-latex-template)
