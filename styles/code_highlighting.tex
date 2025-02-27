@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% File: styles/code_highlighting.tex
+% Description: Configuration for code listings in LaTeX.
+%              Defines syntax highlighting, colors, frame styles, and layout for displayed code.
+% Author: Roberto Toapanta
+% Date: 2025-02-22
+% ------------------------------------------------------------------------------
+
+% Set syntax highlighting configurations for LaTeX listings
+\lstset{
+    backgroundcolor=\color{blue!10},      % Background color for the code block
+    basicstyle=\footnotesize\ttfamily\color{black},  % Basic text style (monospace, black color)
+    breaklines=true,                      % Enable line wrapping for long lines
+    frame=single,                          % Add a single-line border around code blocks
+    framesep=5pt,                          % Spacing adjustments within the frame
+    rulecolor=\color{gray},                % Frame border color
+    keywordstyle=\color{blue!70!black},    % Styling for keywords (blue)
+    commentstyle=\color{green!50!black},   % Styling for comments (green)
+    stringstyle=\color{red!70!black},      % Styling for strings (red)
+    numberstyle=\tiny\color{gray},         % Styling for line numbers (gray, small font)
+    numbers=left,                          % Show line numbers on the left side
+    stepnumber=1,                          % Line number step (every line numbered)
+    tabsize=4,                             % Tab size (spaces per tab)
+    showstringspaces=false,                % Do not display spaces inside strings as visible markers
+    captionpos=b,                          % Position of the caption (bottom of the code block)
+    xleftmargin=15pt,                      % Left margin for code block (to align with the text)
+    xrightmargin=5pt,                      % Right margin for code block
+    framexleftmargin=10pt,                 % Additional left margin inside the frame
+    framexrightmargin=10pt,                % Additional right margin inside the frame
+    framextopmargin=5pt,                   % Additional top margin inside the frame
+    framexbottommargin=5pt,                % Additional bottom margin inside the frame
+    escapeinside={(*}{*)},                 % Allow escaping to LaTeX commands inside code using (* ... *)
+    identifierstyle=\color{teal},          % Styling for variable identifiers (teal)
+    emphstyle=\color{magenta},             % Styling for emphasized words (magenta)
+    morekeywords={sudo, apt, curl, systemctl, zerotier-cli, ping, ssh, ufw} % Additional keywords for syntax highlighting
+}

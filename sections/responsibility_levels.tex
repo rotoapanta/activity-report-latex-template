@@ -1,0 +1,45 @@
+% ----------------------------------------------------------------------------
+% File: responsibility_levels.tex
+% Description: Defines the responsibility levels section in the LaTeX document.
+% Author: Roberto Toapanta
+% Date: 2025-02-22
+% ----------------------------------------------------------------------------
+
+% Section title centered and with increased font size
+\section*{\makebox[\textwidth]{\Large \textbf{NIVELES DE RESPONSABILIDAD}}}
+
+% Add vertical space below the title
+\vspace{0.5cm}
+
+% Center the table within the page
+\begin{center}
+    % Adjust row height for better readability
+    \renewcommand{\arraystretch}{1.4}
+
+    % Create a two-column table with centered text
+    \begin{tabular}{|>{\centering\arraybackslash}p{7cm}|>{\centering\arraybackslash}p{7cm}|}
+        \hline
+        % Row for "Elaborado por" section title
+        \multicolumn{2}{|c|}{\textbf{\fontsize{12}{14}\selectfont ELABORADO POR}} \\
+        \hline
+        \hline
+        % Row for author's name and position
+        \vspace{0.2cm}
+        \textbf{\fontsize{11}{13}\selectfont M.Sc. Roberto Toapanta} & \\  
+        \fontsize{10}{12}\selectfont Analista de Redes de Monitoreo Geofísico 2 \vspace{0.5cm} & \\
+        \hline
+        \hline
+        % Row for "Aprobado por" section title
+        
+        \multicolumn{2}{|c|}{\textbf{\fontsize{12}{14}\selectfont APROBADO POR}} \\
+        \hline
+        % Row for approver's name and position
+        \vspace{0.2cm}
+        \textbf{\fontsize{11}{13}\selectfont M.Sc. Wilson Enríquez} & \\  
+        \fontsize{10}{12}\selectfont Jefe de Área \vspace{0.5cm} & \\
+        \hline
+    \end{tabular}
+\end{center}
+
+% Add vertical space below the table
+\vspace{1cm}

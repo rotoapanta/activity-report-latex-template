@@ -1,0 +1,55 @@
+% ------------------------------------------------------------------------------
+% File: template.tex
+% Description: Main LaTeX document file. Loads the custom class, metadata, and 
+%              different sections of the document.
+% Author: Roberto Toapanta
+% Date: 2025-02-22
+% ------------------------------------------------------------------------------
+
+\documentclass{template} % Uses the updated template.cls
+
+% ------------------------------------------------------------------------------
+% Load document metadata (Title, Code, Version, Date)
+% ------------------------------------------------------------------------------
+\input{styles/document_metadata}
+
+\begin{document}
+
+    % ------------------------------------------------------------------------------
+    % Apply the custom page style
+    % ------------------------------------------------------------------------------
+    \pagestyle{allpages} % Uses a custom page style (not "fancy")
+
+    % Increase space between the header and content
+    \setlength{\headsep}{100pt} 
+
+    % ------------------------------------------------------------------------------
+    % Cover Page
+    % ------------------------------------------------------------------------------
+    \input{sections/cover_page} 
+    \clearpage  
+
+    % ------------------------------------------------------------------------------
+    % Responsibility Levels Section
+    % ------------------------------------------------------------------------------
+    \input{sections/responsibility_levels} 
+    \clearpage
+
+    % ------------------------------------------------------------------------------
+    % Table of Contents
+    % ------------------------------------------------------------------------------
+    \tableofcontents
+    \thispagestyle{fancy} % Ensures the correct header style is applied
+    \clearpage  
+
+    % ------------------------------------------------------------------------------
+    % Main Content Section
+    % ------------------------------------------------------------------------------
+    \input{sections/content} 
+    
+    % ------------------------------------------------------------------------------
+    % Extra Spacing (Adjust if needed)
+    % ------------------------------------------------------------------------------
+    \vspace*{5cm}  % Reduce or increase spacing if necessary
+
+\end{document}

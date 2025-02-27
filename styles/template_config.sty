@@ -1,0 +1,98 @@
+% ------------------------------------------------------------------------------
+% File: styles/template_config.sty
+% Description: Configuration package for LaTeX document formatting.
+%              This package sets up document geometry, font settings, 
+%              section styles, and TikZ diagram configurations.
+% Author: Roberto Toapanta
+% Date: 2025-02-22
+% ------------------------------------------------------------------------------
+
+\ProvidesPackage{styles/template_config} % Define a custom package for document configuration
+
+% ------------------------------------------------------------------------------
+% Essential Packages
+% ------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc}  % UTF-8 encoding for better character compatibility
+\usepackage{graphicx}        % Include images in the document
+\usepackage{array}           % Enhanced table formatting
+\usepackage{multirow}        % Support for multirow table cells
+\usepackage{fancyhdr}        % Custom header and footer formatting
+\usepackage{hyperref}        % Enable hyperlinks in the document
+\usepackage{listings}        % Code listings and syntax highlighting
+\usepackage{xcolor}          % Extended color support
+\usepackage{tikz}            % Drawing diagrams with TikZ
+\usepackage{lastpage}        % Reference the last page number
+\usepackage{tocloft}         % Custom table of contents formatting
+\usepackage{helvet}          % Use Helvetica font
+\usetikzlibrary{shapes.geometric, arrows, shadows} % Additional TikZ libraries
+\usepackage{titlesec}        % Customize section titles
+
+% ------------------------------------------------------------------------------
+% Document Geometry Configuration
+% ------------------------------------------------------------------------------
+
+\usepackage[
+    a4paper,         % Paper size: A4
+    left=2.5cm,      % Left margin: 2.5 cm
+    top=2.5cm,       % Top margin: 2.5 cm
+    headheight=15pt, % Header height: 15 pt
+    headsep=20pt,    % Space between header and text: 20 pt
+    textheight=580pt, % Text area height: 580 pt
+    textwidth=426pt,  % Text area width: 426 pt
+    marginparsep=10pt, % Space between text and margin notes: 10 pt
+    marginparwidth=50pt, % Margin notes width: 50 pt
+    footskip=30pt,    % Space between text and footer: 30 pt
+    hoffset=0pt,      % Horizontal offset: 0 pt
+    voffset=0pt,      % Vertical offset: 0 pt
+    paperwidth=597pt,  % Paper width: 597 pt
+    paperheight=845pt  % Paper height: 845 pt
+]{{geometry}}
+
+% ------------------------------------------------------------------------------
+% Font Configuration
+% ------------------------------------------------------------------------------
+
+\renewcommand{\familydefault}{\sfdefault} % Set default font to sans-serif
+\usepackage[T1]{fontenc}  % Improved font encoding
+\usepackage{lmodern}      % Use Latin Modern font for better compatibility
+
+% ------------------------------------------------------------------------------
+% TikZ Styles for Diagrams
+% ------------------------------------------------------------------------------
+
+% Define a style for device nodes (rectangular with rounded corners)
+\tikzstyle{device} = [
+    rectangle, rounded corners, minimum width=3cm, minimum height=1cm,
+    text centered, draw=black, fill=blue!30, drop shadow
+]
+
+% Define a style for network nodes (hexagonal shape)
+\tikzstyle{network} = [
+    regular polygon, regular polygon sides=6, minimum width=4cm, minimum height=2cm,
+    text centered, draw=black, fill=green!30, drop shadow
+]
+
+% Define a style for arrows (thick and styled with stealth arrowheads)
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+% ------------------------------------------------------------------------------
+% Section Title Formatting
+% ------------------------------------------------------------------------------
+
+% Format sections with numbering (e.g., "1. Section Title")
+\titleformat{\section}
+  {\normalfont\Large\bfseries}  % Font size and bold formatting
+  {\thesection.}{0.5em}{}        % Add a period after the section number
+
+% Format subsections with numbering (e.g., "1.1 Subsection Title")
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\thesubsection.}{0.5em}{}
+
+% Format subsubsections with numbering (e.g., "1.1.1 Subsubsection Title")
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}
+  {\thesubsubsection.}{0.5em}{}
+
+\endinput % Prevent further processing of the package file

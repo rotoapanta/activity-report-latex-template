@@ -1,0 +1,170 @@
+% ------------------------------------------------------------------------------
+% File: contenido.tex
+% Description: Main content of the LaTeX document, covering the installation 
+%              and configuration of ZeroTier on Raspberry Pi 5.
+% Author: [Your Name]
+% Last Modified: [Last Modification Date]
+% ------------------------------------------------------------------------------
+
+% ---------------------
+% SECTION: Introduction
+% ---------------------
+
+\section{Introducción a ZeroTier}
+ZeroTier es una solución de red privada virtual (VPN) que permite interconectar dispositivos de manera segura sin necesidad de configuraciones complejas en routers o firewalls. Es ideal para acceder de manera remota a una Raspberry Pi sin abrir puertos en el router.
+
+% ------------------------
+% SECTION: Prerequisites
+% ------------------------
+
+\section{Requisitos Previos}
+Antes de comenzar, asegúrate de cumplir con los siguientes requisitos:
+\begin{itemize}
+    \item Una \textbf{Raspberry Pi 5} con \textbf{Raspberry Pi OS} instalado y acceso a Internet.
+    \item Acceso a la terminal de la Raspberry Pi (puede ser local o vía SSH).
+    \item Una cuenta en \href{https://my.zerotier.com}{ZeroTier}.
+\end{itemize}
+
+% ----------------------------------------
+% SECTION: Installing ZeroTier on Raspberry Pi 5
+% ----------------------------------------
+
+\section{Instalación de ZeroTier en Raspberry Pi 5}
+Sigue estos pasos para instalar ZeroTier en tu Raspberry Pi 5:
+
+\subsection{Actualizar el sistema}
+\begin{lstlisting}[language=bash]
+sudo apt update && sudo apt upgrade -y
+\end{lstlisting}
+
+\subsection{Instalar ZeroTier}
+\begin{lstlisting}[language=bash]
+curl -s https://install.zerotier.com | sudo bash
+\end{lstlisting}
+
+\subsection{Verificar la instalación}
+\begin{lstlisting}[language=bash]
+sudo systemctl status zerotier-one
+\end{lstlisting}
+Si está activo, debería mostrar \texttt{active (running)}.
+
+% ----------------------------------------
+% SECTION: Configuring the ZeroTier Network
+% ----------------------------------------
+
+\section{Configuración de la Red ZeroTier}
+
+\subsection{Crear una cuenta y red en ZeroTier}
+\begin{itemize}
+    \item Inicia sesión en \href{https://my.zerotier.com}{ZeroTier}.
+    \item En el panel, haz clic en \textbf{"Create a Network"}.
+    \item Copia el \textbf{Network ID} generado (ejemplo: \texttt{d5e5fb65374a3986}).
+\end{itemize}
+
+\subsection{Unir la Raspberry Pi a la red ZeroTier}
+\begin{lstlisting}[language=bash]
+sudo zerotier-cli join <Network_ID>
+\end{lstlisting}
+
+\subsection{Autorizar el dispositivo en ZeroTier}
+\begin{itemize}
+    \item Entra nuevamente al panel de ZeroTier y ve a la sección \textbf{Members}.
+    \item Busca la Raspberry Pi y \textbf{autorízala} marcando la casilla correspondiente.
+\end{itemize}
+
+\subsection{Verificar la conexión}
+\begin{lstlisting}[language=bash]
+sudo zerotier-cli listnetworks
+\end{lstlisting}
+Debes ver un estado \texttt{OK} y una IP asignada en la red ZeroTier (ejemplo: \texttt{192.168.194.200}).
+
+% ----------------------------------------
+% SECTION: Connecting and Verifying ZeroTier Network
+% ----------------------------------------
+
+\section{Conexión y Verificación en la Red ZeroTier}
+Si tienes otro dispositivo (como una PC o laptop) que deseas conectar a la misma red ZeroTier, sigue estos pasos:
+
+\subsection{Instalar ZeroTier en una computadora}
+Instala ZeroTier en tu computadora (Ubuntu, Windows o Mac).
+
+\subsection{Unirse a la misma red}
+\begin{lstlisting}[language=bash]
+sudo zerotier-cli join <Network_ID>
+\end{lstlisting}
+
+\subsection{Autorizar la computadora}
+Autoriza la computadora en el panel de ZeroTier.
+
+\subsection{Verificar la conexión entre dispositivos}
+\begin{lstlisting}[language=bash]
+ping <IP_ZeroTier_PC>
+ping <IP_ZeroTier_RPi>
+\end{lstlisting}
+
+
+% ----------------------------------------
+% SECTION: ZeroTier Network Diagram
+% ----------------------------------------
+
+\section{Diagrama de la Red ZeroTier}
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[node distance=2cm]
+        % Dispositivos
+        \node (rpi) [device, fill=blue!30] {Raspberry Pi};
+        \node (pc) [device, right of=rpi, xshift=4cm, fill=purple!30] {PC/Laptop};
+        \node (cloud) [network, below of=rpi, yshift=-2cm, fill=green!30] {Red ZeroTier};
+
+        % Conexiones
+        \draw [arrow, thick, blue!50!black] (rpi) -- (cloud);
+        \draw [arrow, thick, blue!50!black] (pc) -- (cloud);
+    \end{tikzpicture}
+    \caption{Diagrama de la red ZeroTier conectando una Raspberry Pi y una PC.}
+\end{figure}
+
+% ----------------------------------------
+% SECTION: Remote Access to the Raspberry Pi
+% ----------------------------------------
+
+\section{Acceso Remoto a la Raspberry Pi}
+Puedes conectarte a tu Raspberry Pi de forma remota a través de SSH:
+\begin{lstlisting}[language=bash]
+ssh pi@<IP_ZeroTier_RPi>
+\end{lstlisting}
+
+% ----------------------------------------
+% SECTION: Troubleshooting
+% ----------------------------------------
+
+\section{Solución de Problemas}
+
+\subsection{No se puede hacer ping entre dispositivos}
+\begin{itemize}
+    \item Verifica que el \textbf{firewall} de la Raspberry Pi permite tráfico en \textbf{ZeroTier}:
+    \begin{lstlisting}[language=bash]
+sudo ufw allow 22/tcp
+sudo ufw enable
+    \end{lstlisting}
+    \item Asegúrate de que ambos dispositivos estén en la misma red y hayan sido autorizados.
+\end{itemize}
+
+\subsection{No se puede conectar por SSH}
+\begin{itemize}
+    \item Asegúrate de que el servicio SSH está corriendo en la Raspberry Pi:
+    \begin{lstlisting}[language=bash]
+sudo systemctl start ssh
+    \end{lstlisting}
+    
+    \item Verifica que el puerto 22 está abierto en el firewall:
+    \begin{lstlisting}[language=bash]
+sudo ufw allow 22/tcp
+    \end{lstlisting}
+\end{itemize}
+
+% ----------------------------------------
+% SECTION: Conclusion
+% ----------------------------------------
+
+\section{Conclusión}
+ZeroTier es una excelente solución para acceder de manera remota a tu Raspberry Pi sin complicaciones de redes y configuración de routers. Siguiendo este manual, puedes instalar, configurar y utilizar ZeroTier en tu Raspberry Pi 5 de manera efectiva.

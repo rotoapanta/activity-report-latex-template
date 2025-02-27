@@ -1,0 +1,30 @@
+% ----------------------------------------------------------------------------
+% File: cover_page.tex
+% Description: Cover page of the LaTeX document.
+% Displays the document title and an additional subtitle.
+% Author: Roberto Toapanta
+% Date: 2025-02-22
+% ----------------------------------------------------------------------------
+
+% Set the page style to apply the custom header and footer
+\thispagestyle{allpages}
+
+% Add vertical spacing to position the title correctly on the page
+\vspace*{3cm}
+
+% Define a text block to structure the title and subtitle
+\noindent
+\begin{minipage}{\textwidth} % Use the full width of the page
+    \raggedleft % Align text to the right
+    
+    % Set the font size for the title
+    \fontsize{24}{26}\selectfont 
+    \textbf{\documenttitle} % Insert the document title from metadata
+    
+    % Add space between the title and subtitle
+    \vspace{2cm}
+    
+    % Display the document's subtitle
+    \textbf{Gestión de Instrumentación de Monitoreo Sísmico Volcánico y Telecomunicaciones} 
+    
+\end{minipage} % Close the text block
