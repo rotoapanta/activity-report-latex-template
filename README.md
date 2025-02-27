@@ -46,7 +46,7 @@ activity-report-latex-template/
 
 ## **Requirements**
 
-### **LaTeX Installation**
+1. **LaTeX Installation**
 This template is designed to be used with Overleaf, so no installation is required. However, if you wish to compile it locally, ensure you have LaTeX installed::
 
 ### Ubuntu/Linux:
@@ -64,7 +64,8 @@ This template uses the following LaTeX packages:
 ```
 
 ## **How to Use**
-1. Clone the repository to your local machine:
+
+1. **Clone the repository to your local machine**:
 
    ```bash
    git clone https://github.com/tu-usuario/activity-report-latex-template.git
@@ -85,7 +86,7 @@ This template uses the following LaTeX packages:
 
 To modify the document::
 
- **Change the title, code, version, and date**  
+1. **Change the title, code, version, and date**  
 Edit the `styles/document_metadata.tex` file:
 
 ```tex
@@ -95,10 +96,10 @@ Edit the `styles/document_metadata.tex` file:
 \newcommand{\documentdate}{13-MARZO-2025}
 ```
 
- **Modify the header and footer**  
+2. **Modify the header and footer**  
 Edit `styles/header_footer.tex` as needed.
 
- **Add new sections**  
+3. **Add new sections**  
 Add new `.tex` files in `sections/` and then include them in `template.tex`:
 
 ```tex
@@ -153,12 +154,6 @@ Clone your forked repository to your local machine.
 6. **Open a Pull Request**:
 
 Go to your repository on GitHub.
-
----
-
-## **Licencia**
-Este proyecto está licenciado bajo la **MIT License**. Puedes usarlo y modificarlo libremente.
-
 
 ---
 ## License
