@@ -119,18 +119,20 @@ Este proyecto está licenciado bajo la **MIT License**. Puedes usarlo y modifica
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
+---
 ## Authors
 
 - [@rotoapanta](https://github.com/rotoapanta)
 
+---
 ## More Info
 
 * [Official documentation for DiGOS, Portafolio Seismic Measurement Equipment](https://digos.eu/seismology/)
 
+---
 ## Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/roberto-carlos-toapanta-g/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/rotoapanta)
 
-**¡Gracias por usar MiTemplateLatex!** 
-
+**¡Gracias por usar Activity Report LaTex template!** 
