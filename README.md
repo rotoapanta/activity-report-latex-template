@@ -11,13 +11,13 @@
 
 ## **Features**
 
-* Modular structure: Each section is stored in separate files for easy editing.
-*Customizable headers and footers.
-*Professional style based on a custom class (template.cls).
-*Code highlighting support using listings.
-*Improved section formatting with titlesec.
-* Automatic table of contents generation.
-* Custom diagrams using TikZ. 
+- Modular structure: Each section is stored in separate files for easy editing.
+- Customizable headers and footers.
+- Professional style based on a custom class (template.cls).
+- Code highlighting support using listings.
+- Improved section formatting with titlesec.
+- Automatic table of contents generation.
+- Custom diagrams using TikZ. 
 
 ---
 
