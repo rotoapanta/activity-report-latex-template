@@ -2,8 +2,8 @@
 
 ![LaTeX](https://img.shields.io/badge/LaTeX-Professional-blue?style=for-the-badge&logo=latex)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
-![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange?style=for-the-badge)
+![License](https://img.shields.io/github/license/rotoapanta/activity-report-latex-template)
+![GitHub repo size](https://img.shields.io/github/repo-size/rotoapanta/activity-report-latex-template)
 
 ## Description
 
@@ -49,13 +49,13 @@ activity-report-latex-template/
 1. **LaTeX Installation**
 This template is designed to be used with Overleaf, so no installation is required. However, if you wish to compile it locally, ensure you have LaTeX installed::
 
-### Ubuntu/Linux:
+- Ubuntu/Linux:
 
 ```bash
 sudo apt install texlive-full
 ```
 
-### Required Packages
+- Required Packages
 This template uses the following LaTeX packages:
 
 ```tex
