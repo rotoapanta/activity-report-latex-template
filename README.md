@@ -1,17 +1,16 @@
 # Activity Report LaTex template
 
-![LaTeX](https://img.shields.io/badge/LaTeX-Professional-blue?style=for-the-badge&logo=latex)
 ![LaTeX](https://img.shields.io/badge/LaTeX-Professional-blue?logo=latex)
-![LaTeX](https://img.shields.io/badge/LaTeX-Professional-green?logo=latex)
-
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/github/license/rotoapanta/activity-report-latex-template)
 ![GitHub repo size](https://img.shields.io/github/repo-size/rotoapanta/activity-report-latex-template)
 
+---
 ## Description
 
 **Activity Report LaTex template** is a professional **LaTeX** template designed for creating technical documents, manuals, and reports. This template provides a modular structure, customizable styles, and professional headers.
 
+---
 ## **Features**
 
 - Modular structure: Each section is stored in separate files for easy editing.
@@ -23,7 +22,6 @@
 - Custom diagrams using TikZ. 
 
 ---
-
 ## **Estructura del Proyecto**
 
 ```
@@ -46,7 +44,6 @@ activity-report-latex-template/
 ```
 
 ---
-
 ## **Requirements**
 
 1. **LaTeX Installation**
@@ -66,6 +63,7 @@ This template uses the following LaTeX packages:
 \usepackage{geometry, lastpage, tocloft, array, multirow, helvet}
 ```
 
+---
 ## **How to Use**
 
 1. **Clone the repository to your local machine**:
@@ -84,7 +82,6 @@ This template uses the following LaTeX packages:
    O si usas Overleaf, simplemente sube los archivos y compila.
 
 ---
-
 ## **Customization**
 
 To modify the document::
