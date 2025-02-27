@@ -24,47 +24,53 @@
 ## **Estructura del Proyecto**
 
 ```
-MiTemplateLatex/
-│── assets/                         # 
-│   ├── image.png         # 
-│── sections/                        # Secciones del documento
-│   ├── content.tex                 # Contenido principal del documento
-│   ├── cover_page.tex              # Portada
-│   ├── responsibility_levels.tex   # Niveles de responsabilidad
-│── styles/                         # Configuración de estilos y clases
-│   ├── code_highlighting.tex       # Configuración para resaltado de código
-│   ├── document_metadata.tex       # 
-│   ├── header_footer.tex           # Configuración de encabezado y pie de página
-│   ├── template_config.sty         # Configuración general de estilos
-│── README.md                       # Este archivo (Instrucciones y detalles del proyecto)
-├── template.cls               # Clase personalizada para documentos LaTeX
-│── template.tex                   # Documento principal (importa las secciones)
+activity-report-latex-template/
+│── assets/                        # Assets folder
+│   ├── image.png                  # Sample image
+│── sections/                       # Document sections
+│   ├── content.tex                 # Main document content
+│   ├── cover_page.tex              # Cover page
+│   ├── responsibility_levels.tex   # Responsibility levels
+│── styles/                         # Style and class configuration
+│   ├── code_highlighting.tex       # Code highlighting settings
+│   ├── document_metadata.tex       # Document metadata (title, version, date)
+│   ├── header_footer.tex           # Header and footer settings
+│   ├── template_config.sty         # General style settings
+│── README.md                       # This file (Instructions and project details)
+│── LICENSE                         # Project license (MIT)
+│── template.cls                    # Custom LaTeX class
+│── template.tex                     # Main document (imports sections)
 ```
 
 ---
 
-## **Requisitos**
+## **Requirements**
 
-### **Instalación de LaTeX**
-Para compilar este documento, se necesita Overleaf:
+### **LaTeX Installation**
+This template is designed to be used with Overleaf, so no installation is required. However, if you wish to compile it locally, ensure you have LaTeX installed::
 
+### Ubuntu/Linux:
 
-### **Paquetes Necesarios**
-El template usa los siguientes paquetes de LaTeX:
+```bash
+sudo apt install texlive-full
+```
+
+### Required Packages
+This template uses the following LaTeX packages:
 
 ```tex
 \usepackage{graphicx, fancyhdr, hyperref, listings, tikz, xcolor, titlesec}
 \usepackage{geometry, lastpage, tocloft, array, multirow, helvet}
 ```
 
-## **Cómo Usarlo**
-1. **Clona el repositorio** en tu máquina local:
+## **How to Use**
+1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/tu-usuario/MiTemplateLatex.git
-   cd MiTemplateLatex
+   git clone https://github.com/tu-usuario/activity-report-latex-template.git
+   cd activity-report-latex-template.git
    ```
-
+   
 2. **Compila el documento** usando **pdflatex** o **XeLaTeX**:
 
    ```bash
@@ -75,12 +81,12 @@ El template usa los siguientes paquetes de LaTeX:
 
 ---
 
-## **Personalización**
+## **Customization**
 
-Para modificar el documento:
+To modify the document::
 
- **Cambiar el título, código, versión y fecha**  
-Edita el archivo `styles/document_metadata.tex`:
+ **Change the title, code, version, and date**  
+Edit the `styles/document_metadata.tex` file:
 
 ```tex
 \newcommand{\documenttitle}{MANUAL DE INSTALACIÓN Y USO DE ZEROTIER EN RASPBERRY PI}
@@ -89,30 +95,70 @@ Edita el archivo `styles/document_metadata.tex`:
 \newcommand{\documentdate}{13-MARZO-2025}
 ```
 
- **Modificar el encabezado y pie de página**  
-Edita `styles/header_footer.tex` según sea necesario.
+ **Modify the header and footer**  
+Edit `styles/header_footer.tex` as needed.
 
- **Agregar nuevas secciones**  
-Añade nuevos archivos `.tex` en `sections/` y luego inclúyelos en `template.tex`:
+ **Add new sections**  
+Add new `.tex` files in `sections/` and then include them in `template.tex`:
 
 ```tex
 \input{sections/new_section}
 ```
 
 ---
+## Feedback
+
+If you have any feedback, please reach out to us at robertocarlos.toapanta@gmail.com
+
+---
+## Support
+
+For support, email robertocarlos.toapanta@gmail.com or join our Discord channel.
+
+---
+## Contributing
+
+We welcome contributions to improve this script. Please follow these steps:
+
+1. **Fork the Repository**: 
+
+Click on the "Fork" button at the top right of this page to create a copy of this repository on your GitHub account.
+
+2. **Clone the Repository**: 
+
+Clone your forked repository to your local machine.
+
+```bash
+   $ git clone https://github.com/rotoapanta/activity-report-latex-template.git
+```
+
+3. **Create a new branch**:
+
+```bash
+   $ git checkout -b feature/your-feature-name
+```
+
+4. **Make your changes and commit**:
+
+```bash
+   $ git commit -m "Add your detailed description here"
+```
+
+5. **Push to your branch**:
+
+```bash
+   $ git push origin feature/your-feature-name
+```
+
+6. **Open a Pull Request**:
+
+Go to your repository on GitHub.
+
+---
 
 ## **Licencia**
 Este proyecto está licenciado bajo la **MIT License**. Puedes usarlo y modificarlo libremente.
 
----
-
-## **Contribuciones**
-¡Las contribuciones son bienvenidas! Si quieres mejorar este template:
-
-1. Haz un **fork** del repositorio.
-2. Crea una nueva rama (`git checkout -b nueva-funcionalidad`).
-3. Realiza cambios y sube (`git commit -m "Añadir nueva función"`).
-4. Envía un **Pull Request**.
 
 ---
 ## License
