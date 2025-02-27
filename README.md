@@ -5,19 +5,19 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 ![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange?style=for-the-badge)
 
-## Descripción
+## Description
 
-**Activity Report LaTex template** es un template profesional en **LaTeX** diseñado para la creación de **documentos técnicos, manuales y reportes**. Este template proporciona una estructura modular, estilos personalizables y encabezados profesionales.
+**Activity Report LaTex template** is a professional **LaTeX** template designed for creating technical documents, manuals, and reports. This template provides a modular structure, customizable styles, and professional headers.
 
-## **Características**
+## **Features**
 
-**Estructura modular**: Cada sección del documento se encuentra en archivos separados para facilitar la edición.  
-**Encabezados y pies de página personalizados**.  
-**Estilo profesional** basado en clases personalizadas (`template.cls`).  
-**Soporte para código fuente** con resaltado de sintaxis (`listings`).  
-**Formato de títulos y subtítulos mejorado** con `titlesec`.  
-**Generación automática de tabla de contenidos**.  
-**Diagramas personalizados** con `TikZ`.  
+* Modular structure: Each section is stored in separate files for easy editing.
+*Customizable headers and footers.
+*Professional style based on a custom class (template.cls).
+*Code highlighting support using listings.
+*Improved section formatting with titlesec.
+* Automatic table of contents generation.
+* Custom diagrams using TikZ. 
 
 ---
 
